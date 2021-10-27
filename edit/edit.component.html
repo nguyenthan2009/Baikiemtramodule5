@@ -1,0 +1,23 @@
+<div class="container contact-form" >
+  <form (ngSubmit)="editProduct()"[formGroup]="formBook" >
+    <input type="hidden" class="form-control" formControlName="id">
+    <h3>Create Product</h3>
+    <p class="status">{{status}}</p>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" formControlName="title"   minlength="3" maxlength="100" required class="form-control"  placeholder="Tiêu đề *" id="name" />
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="author" class="form-control" placeholder="tác giả *" id="price" />
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="description" class="form-control" placeholder="Mô tả *" id="quantity" />
+        </div>
+        <div class="form-group">
+          <input type="submit" name="btnSubmit"  class="btnContact" value="Tạo sản phẩm" />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
